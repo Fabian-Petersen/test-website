@@ -21,9 +21,7 @@ jobs:
         run: npm run build
 
       - name: List build output
-        run: |
-          echo "Build output directory contents:"
-          ls -la out/
+        run: ls -la out/
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -33,12 +31,7 @@ jobs:
           aws-region: af-south-1
 
       - name: Deploy to S3
-        run: |
-          echo "Starting S3 sync..."
-          aws s3 sync out/ s3://${{ secrets.AWS_S3_BUCKET }} --delete --debug
-          echo "S3 sync completed"
+        run: aws s3 sync out/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
       - name: Verify S3 upload
-        run: |
-          echo "Verifying S3 bucket contents:"
-          aws s3 ls s3://${{ secrets.AWS_S3_BUCKET }}
+        run: aws s3 ls s3://${{ secrets.AWS_S3_BUCKET }}
