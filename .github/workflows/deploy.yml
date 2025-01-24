@@ -31,7 +31,7 @@ jobs:
           aws-region: af-south-1
 
       - name: Deploy to S3
-        run: aws s3 sync out/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
+        run: aws s3 sync out/ s3://${{ secrets.AWS_S3_BUCKET }} --delete --cache-control "no-cache,max-age=0"
 
       - name: Verify S3 upload
         run: aws s3 ls s3://${{ secrets.AWS_S3_BUCKET }}
