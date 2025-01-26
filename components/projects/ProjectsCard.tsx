@@ -2,9 +2,7 @@ import Image from "next/image";
 import { ProjectCardDataType } from "@/public/data/projectData";
 import CardButtons from "./CardButtons";
 import Link from "next/link";
-import AnimatePresence from "@/app/animations/AnimatePresence";
 
-type Props = { isPending: boolean; items: ProjectCardDataType[] };
 const ProjectsCard = ({
   projectTitle,
   description,

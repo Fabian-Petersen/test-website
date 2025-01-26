@@ -3,7 +3,6 @@
 import PageHeading from "@/components/PageHeading";
 import Gallery from "@/components/projects/Gallery";
 import ProjectFilterButtons from "./ProjectFilterButtons";
-import projectsCardData from "@/public/data/projectData";
 import { ProjectCardDataType } from "@/public/data/projectData";
 import useFilterItems from "@/app/customHooks/useFilterItems";
 import { useFetchItem } from "@/lib/reactQueryCutomHooks";
@@ -12,7 +11,7 @@ import { useFetchItem } from "@/lib/reactQueryCutomHooks";
 
 const ProjectsPage = () => {
   // $ Data from the database is fetched using the useFetchItem hook.
-  const { data, isPending, isError } = useFetchItem("projects");
+  const { data, isPending } = useFetchItem("projects");
   const projects = data ? JSON.parse(data.body) : [];
 
   // $ Pass the array to be filtered with the filter key "category".

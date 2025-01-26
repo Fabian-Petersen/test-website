@@ -2,7 +2,7 @@
 
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import useIsMobile from "@/customHooks/useScreenSize";
+import useIsMobile from "@/app/customHooks/useScreenSize";
 
 type Props = {
   title: string;

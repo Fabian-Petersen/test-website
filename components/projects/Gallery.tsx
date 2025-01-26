@@ -6,7 +6,7 @@
 
 import { ProjectCardDataType } from "@/public/data/projectData";
 import FramerAnimatePresence from "@/app/animations/AnimatePresence";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import ProjectsCard from "./ProjectsCard";
 
 type GalleryProps = {

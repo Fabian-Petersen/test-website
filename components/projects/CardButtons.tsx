@@ -1,7 +1,5 @@
 "use client";
 
-import { ProjectCardDataType } from "@/public/data/projectData";
-import Link from "next/link";
 import { Tooltip } from "flowbite-react";
 
 type Props = {
