@@ -9,7 +9,7 @@ const HeroInfo = () => {
       </h3>
       <h1 className="text-[2rem] sm:text-[2.3rem] md:text-[2.7rem] lg:text-[4rem] font-bold">
         <span className=" text-primaryColor">Fabian </span>
-        Petersen v1.0
+        Petersen
       </h1>
       <p className="~text-sm/xl tracking-wider leading-2 normal-case mb-8 w-[80%]">
         Welcome to my portfolio website showcasing my work as a

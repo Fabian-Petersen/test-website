@@ -79,6 +79,12 @@ jobs:
             --exclude "*.ico" \
             --delete
 
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+
       - name: Verify S3 upload
         run: aws s3 ls s3://${{ secrets.AWS_S3_BUCKET }}
 # name: Deploy Portfolio
