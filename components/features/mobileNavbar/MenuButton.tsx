@@ -7,25 +7,13 @@ import pageLinkData from "@/public/data/pageLinkData";
 import { useEffect } from "react";
 import { initFlowbite } from "flowbite";
 
-import { useThemeContext } from "@/app/ContextAPI_Hooks/usethemeContext";
 import MenuCloseButton from "../MenuCloseButton";
 
 const MenuButton = () => {
-  // $ Get the theme from the context API to change the button color whith the theme changes.
-  const { theme } = useThemeContext();
-
   // $ Initialise the flowbite library to enable the dropdown menu in the navbar to open and close.
   useEffect(() => {
     initFlowbite();
   }, []);
-
-  // $ Define the interface for the pageLinkData array.
-  type PageLink = {
-    id: number;
-    href: string;
-    icon: any;
-    name: string;
-  };
 
   return (
     <div

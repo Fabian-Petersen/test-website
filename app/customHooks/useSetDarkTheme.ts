@@ -1,5 +1,4 @@
 // // $ This hook manages the logic to set the theme by toggling between dark and light mode.
-import React from "react";
 import { useEffect } from "react";
 import { useGlobalContext, T, Theme } from "@/app/useGlobalContext";
 
@@ -20,7 +19,7 @@ const useSetDarkTheme = () => {
       document.documentElement.classList.add("dark");
       setTheme(localTheme as Theme);
     }
-  }, []);
+  }, [setTheme]);
   return { toggleDarkTheme };
 };
 

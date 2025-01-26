@@ -6,7 +6,7 @@ type FormErrors = {
 };
 
 export const useValidateFormZod = (
-  formData: Record<string, any>,
+  formData: Record<string, unknown>,
   formSchema: ZodSchema
 ) => {
   const [formErrors, setFormErrors] = useState<FormErrors>({});

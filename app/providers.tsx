@@ -1,7 +1,6 @@
 import React from "react";
 import AppProvider from "./useGlobalContext";
 import { ToastContainer } from "react-toastify";
-import StepperContextProvider from "./ContextAPI_Hooks/useStepperContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "@/components/ui/toaster";
@@ -20,11 +19,9 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <AppProvider>
-        <StepperContextProvider>
-          <Toaster />
-          <ToastContainer position="top-center" theme="light" />
-          {children}
-        </StepperContextProvider>
+        <Toaster />
+        <ToastContainer position="top-center" theme="light" />
+        {children}
       </AppProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

@@ -22,7 +22,7 @@ const SocialsLinkIcons = () => {
         // animate="animateState"
       >
         {socialLinks.map((link) => {
-          const { id, iconImage, href, tooltip, colorClass, className } = link;
+          const { id, iconImage, href, tooltip, colorClass } = link;
           const isGithub = id === "github";
 
           return (

@@ -23,7 +23,11 @@ export const useFetchData = <T>(url: string) => {
         setData(parsedData);
         setLoading(false);
       } catch (error) {
-        setError("Error fetching data");
+        if (axios.isAxiosError(error)) {
+          setError(error.message);
+        } else {
+          setError(String(error));
+        }
         setLoading(false);
       }
     };

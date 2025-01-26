@@ -1,5 +1,5 @@
 import React from "react";
-import pageLinkData, { PageLinksTypes } from "@/data/pageLinkData";
+import pageLinkData from "@/public/data/pageLinkData";
 
 type QuickLinksProps = {
   className?: string;

@@ -1,5 +1,4 @@
 import React from "react";
-import pageLinkData from "@/data/pageLinkData";
 import { ProjectCardDataType } from "@/public/data/projectData";
 import { useFetchItem } from "@/lib/reactQueryCutomHooks";
 

@@ -1,4 +1,3 @@
-import { icon } from "@fortawesome/fontawesome-svg-core";
 import {
   faGlobe,
   faChevronCircleUp,
@@ -11,7 +10,6 @@ import {
   faXmark,
   faEllipsis,
   faBarsStaggered,
-  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";

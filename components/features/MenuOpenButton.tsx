@@ -3,10 +3,7 @@
 // $ The useMobileContext hook is used to get the navOpen state from the context API.
 import { useGlobalContext, T } from "@/app/useGlobalContext";
 
-import useMobileMenuColorHook from "./mobileNavbar/useMobileMenuColorHook";
-
 const MenuCloseButton = () => {
-  const { menuColor } = useMobileMenuColorHook();
   // $ The ! indicates that the value will never be null or undefined.
   const { theme, setNavOpen }: T = useGlobalContext()!;
 

@@ -1,5 +1,4 @@
 import projectImages from "@/public/images/projectImages";
-import skillsIconImages from "../icons/skill-icons";
 import { v4 as uuidv4 } from "uuid";
 
 export type ProjectCardDataType = {
@@ -21,14 +20,7 @@ export type ProjectCardDataType = {
   };
 };
 
-const {
-  teaProject,
-  toursProject,
-  comingSoon,
-  cocktailsProject,
-  githubProject,
-  pendingProject,
-} = projectImages;
+const {} = projectImages;
 
 const projectsCardData: ProjectCardDataType[] = [
   {

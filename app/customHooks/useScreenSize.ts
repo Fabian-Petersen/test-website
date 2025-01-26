@@ -16,7 +16,7 @@ const useScreenSize = (width: number) => {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [width]);
 
   return isMobile;
 };

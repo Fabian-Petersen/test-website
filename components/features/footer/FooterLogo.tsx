@@ -1,17 +1,16 @@
 import React from "react";
+import Link from "next/link";
 
-type Props = {};
-
-const FooterLogo = (props: Props) => {
+const FooterLogo = () => {
   return (
     <div className="md:flex justify-center">
-      <a
+      <Link
         href="/#landing"
         className="hidden sm:block text-clampFooterLogoText font-semibold tracking-widest"
       >
         Portfolio
         <span className="text-primaryColor">.</span>
-      </a>
+      </Link>
     </div>
   );
 };

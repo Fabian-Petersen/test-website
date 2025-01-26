@@ -1,5 +1,3 @@
-// { id: uuidv4()https://fabian-portfolio.netlify.app/", name: "Home" }
-import { IconBaseProps } from "react-icons/lib";
 import navIcons from "../icons/navIcons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 const { house, user, clipboard, phone, comment } = navIcons;

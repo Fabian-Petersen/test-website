@@ -1,14 +1,7 @@
 import React from "react";
-import pageLinkData from "@/data/pageLinkData";
+import pageLinkData from "@/public/data/pageLinkData";
 import { usePathname } from "next/navigation";
 import { useGlobalContext } from "@/app/useGlobalContext";
-
-type PageLink = {
-  id: number;
-  href: string;
-  icon: any;
-  name: string;
-};
 
 const MobileNavMenuLinks = () => {
   const { navOpen } = useGlobalContext()!;
