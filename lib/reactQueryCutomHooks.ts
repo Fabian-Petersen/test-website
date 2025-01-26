@@ -15,8 +15,6 @@ export const useFetchItem = (key: string) => {
   return { isPending, isError, data, error };
 };
 
-// const test_url = "https://httpbin.org/post";
-
 // $ Function to Edit Data from the Server with a PATCH request
 export const useEditItem = (key: string) => {
   const queryClient = useQueryClient();

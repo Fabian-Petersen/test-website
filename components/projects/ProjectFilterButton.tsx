@@ -23,7 +23,6 @@ function ProjectFilterButton({ title, filterByValue }: Props) {
       btn.addEventListener("click", () => {
         document.querySelector(".active")?.classList.remove("active");
         btn.classList.add("active");
-        console.log("btnElement", btn);
       });
     });
   };
