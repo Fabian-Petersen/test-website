@@ -1,5 +1,5 @@
 // $ Data for the Footer Links
-import pageLinkData from "@/data/pageLinkData";
+import pageLinkData from "@/public/data/pageLinkData";
 import FooterLogo from "./FooterLogo";
 import { useFetchItem } from "@/lib/reactQueryCutomHooks";
 
