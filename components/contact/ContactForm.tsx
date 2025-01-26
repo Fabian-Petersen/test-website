@@ -9,6 +9,7 @@ import { useCreateItem } from "@/app/lib/reactQueryPOST";
 import { contactFormSchema } from "@/app/schemas";
 
 export type ContactFormDataProps = {
+  id?: string;
   email: string;
   message: string;
   username: string;

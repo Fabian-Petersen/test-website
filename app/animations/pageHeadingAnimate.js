@@ -1,7 +1,5 @@
 // $ Animation for the Main Section Headings "About, Projects, Contact"
 
-import { delay } from "framer-motion";
-
 const parentContainerHeading = {
   initialState: {
     opacity: 0,

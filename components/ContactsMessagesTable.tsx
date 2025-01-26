@@ -2,18 +2,10 @@
 
 import React from "react";
 import LoadingSpinner from "@/components/features/LoadingSpinner";
-import { ContactFormProps } from "./contact/ContactForm";
-import {
-  useReactTable,
-  getCoreRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-} from "@tanstack/react-table";
-
+import type { ContactFormDataProps } from "./contact/ContactForm";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -27,7 +19,7 @@ export type TableProps = {
 };
 
 // $ Fetch the data from the server and display it in a table.
-const ContactMessagesTable = ({ caption, header }: TableProps) => {
+const ContactMessagesTable = () => {
   const { data, isPending, isError } = useFetchItem("contacts");
   const contactMessages = data ? JSON.parse(data.body) : [];
   if (isPending) {
@@ -62,7 +54,7 @@ const ContactMessagesTable = ({ caption, header }: TableProps) => {
       </TableHeader>
       {/* // Row 2: Data */}
       <TableBody className="border-l-0 border-r-0">
-        {contactMessages.map((item: ContactFormProps) => {
+        {contactMessages.map((item: ContactFormDataProps) => {
           const { id, username, email, message } = item;
           return (
             <TableRow
