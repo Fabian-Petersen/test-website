@@ -1,4 +1,4 @@
-type HeaderProps = { label: String };
+type HeaderProps = { label: string };
 
 const Header = ({ label }: HeaderProps) => {
   return (

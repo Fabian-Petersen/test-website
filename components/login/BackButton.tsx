@@ -2,12 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-type BackButtonProps = {
-  href: string;
-  label?: string;
-};
-
-const BackButton = ({ href, label }: BackButtonProps) => {
+const BackButton = () => {
   return (
     <Button
       variant="link"
@@ -16,7 +11,7 @@ const BackButton = ({ href, label }: BackButtonProps) => {
       asChild
     >
       <div className="flex gap-1 hover:no-underline w-1">
-        Don't have access?
+        Dont have access?
         <span>Return</span>
         <Link href="/">
           <span className="hover:text-red-500">Home.</span>

@@ -11,7 +11,6 @@ import {
 import Header from "./Header";
 import Social from "./Social";
 import BackButton from "./BackButton";
-import Divider from "./Divider";
 
 // $ Define the Props for CardWrapper
 type CardWrapperProps = {
@@ -25,8 +24,6 @@ type CardWrapperProps = {
 const CardWrapper = ({
   children,
   headerLabel,
-  backButtonLabel,
-  backButtonHref,
   showSocial,
 }: CardWrapperProps) => {
   return (
@@ -41,7 +38,7 @@ const CardWrapper = ({
         </CardFooter>
       )}
       <CardFooter>
-        <BackButton href={backButtonHref} />
+        <BackButton />
       </CardFooter>
     </Card>
   );

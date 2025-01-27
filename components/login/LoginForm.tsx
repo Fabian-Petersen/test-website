@@ -1,20 +1,9 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import { useState, useTransition } from "react";
-import login from "@/actions/login";
 // import { PasswordToggleInput } from "@/components/PasswordToggleInput";
 
-import useHandleSubmitLogin from "@/customHooks/useHandleSubmitLogin";
-
-// $ Importing the form schema
-import { LoginSchema } from "@/schemas/index";
-import * as z from "zod";
-
-const showPassword: boolean = false;
+import useHandleSubmitLogin from "@/app/customHooks/useHandleSubmitLogin";
 
 // $ Importing the Form Components
 import {
