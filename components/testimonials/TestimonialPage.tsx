@@ -11,7 +11,12 @@ const TestimonialPage = () => {
   const { data, isPending, isError } = useFetchItem("testimonials");
   const testimonials = data ? JSON.parse(data.body) : [];
 
-  if (isError) return <div>Error Loading Testimonials...</div>;
+  if (isError)
+    return (
+      <div className="flex justify-center text-2xl">
+        Error Loading Testimonials...
+      </div>
+    );
 
   return (
     <main
