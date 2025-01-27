@@ -11,36 +11,6 @@ export type TestimonialCardProps = {
   email?: string;
 };
 
-// Sample testimonials data
-export const testimonialsMockData: TestimonialCardProps[] = [
-  {
-    id: "550e8400-e29b-41d4-a716-446655440000",
-    name: "John Smith",
-    position: "Senior Developer at TechCorp",
-    company: "TechCorp",
-    image: "/testimonials/john.jpg",
-    message:
-      "Working with this developer was an absolute pleasure. Their attention to detail and problem-solving skills are exceptional.",
-  },
-  {
-    id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
-    name: "Sarah Johnson",
-    position: "Project Manager at InnovateCo",
-    company: "InnovateCo",
-    message:
-      "Exceptional work ethic and technical expertise. Always delivers high-quality code on time.",
-    image: "/testimonials/sarah.jpg",
-  },
-  {
-    id: "7c9e6679-7425-40de-944b-e07fc1f90ae7",
-    name: "Mike Wilson",
-    position: "CTO at StartupX",
-    company: "StartupX",
-    message:
-      "A talented developer who brings both technical excellence and creative solutions to every project.",
-  },
-];
-
 const TestimonialCard = ({
   testimonial,
 }: {
@@ -63,6 +33,8 @@ const TestimonialCard = ({
           <Image
             src={testimonial.image}
             alt={testimonial.name}
+            width={100}
+            height={100}
             className="w-full h-full object-cover"
           />
         ) : (
