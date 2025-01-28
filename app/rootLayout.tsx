@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 import Navbar from "@/components/features/navbar/Navbar";
 import Header from "@/components/header/Header";
 import ScrollToTopButton from "@/components/features/ScrollToTopButton";
+import Footer from "@/components/footer/Footer";
 
 // $ Context Providers
 import Providers from "./providers";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Props) {
           {isMobile && <Header />}
           {children}
           {isLoginPage ? null : <ScrollToTopButton />}
+          <Footer />
         </Providers>
       </body>
     </html>

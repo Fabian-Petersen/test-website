@@ -23,7 +23,7 @@ const ScrollToTopButton = () => {
 
   return (
     <div
-      className={`fixed left-[95%] top-[90%] z-[1000] transition-all duration-600 ${
+      className={`fixed left-[90%] md:left-[95%] top-[90%] z-[1000] transition-all duration-600 ${
         isScrolled
           ? "animate-scrollToTop pointer-events-auto"
           : "translate-y-[100vh] opacity-0 pointer-events-none"
