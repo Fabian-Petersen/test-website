@@ -27,7 +27,9 @@ const TestimonialPage = () => {
         <PageHeading title="Testimonials" className="bg-slate-200" />
         <div className="flex flex-col items-center h-full my-auto w-full">
           {isPending ? (
-            <div>Loading...</div>
+            <div className="justify-center align-middle dark:text-white text-fontDark tracking-wider text-xl">
+              Loading...
+            </div>
           ) : (
             <TestimonialSlider testimonials={testimonials} />
           )}

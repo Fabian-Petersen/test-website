@@ -33,7 +33,6 @@ const TestimonialForm = () => {
   const { createItem, isPending } = useCreateItem("testimonials");
 
   const router = useRouter();
-  // const isDevelopment = process.env.NODE_ENV === "development";
   const [formData, setFormData] =
     useState<TestimonialFormProps>(initialFormValues);
   const {

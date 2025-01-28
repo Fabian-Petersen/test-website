@@ -16,6 +16,8 @@ const SkillCard = ({ image, name }: SkillCardProps) => {
         <Image
           className="size-8 sm:size-8 lg:size-10 xl:size-12"
           src={image || "/default-image.png"}
+          width={120}
+          height={120}
           alt="html"
         />
         <p
