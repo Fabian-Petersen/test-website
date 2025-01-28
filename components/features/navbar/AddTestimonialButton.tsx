@@ -33,7 +33,7 @@ const AddTestimonialButton = () => {
         buttonLabel="Add Testimonial"
         type="button"
         onClick={handleLogin}
-        className="hover:scale-[102%] bg-primaryColor text-white hover:text-white transition-all duration-300 text-md dark:text-fontLight py-2 px-4 rounded-full tracking-wide"
+        className="hover:scale-[102%] bg-primaryColor text-white hover:text-white transition-all duration-300 text-clampButtonText dark:text-fontLight sm:py-2 sm:px-4 py-1 px-2 rounded-full tracking-wide"
       />
     </motion.div>
   );

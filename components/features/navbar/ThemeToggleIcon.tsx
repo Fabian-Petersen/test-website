@@ -14,7 +14,7 @@ const ThemeToggleIcon = ({ icon, handleClick }: ThemeToggleIconProps) => {
     <FontAwesomeIcon
       data-tooltip-target="tooltip-animation"
       icon={icon}
-      className="text-blue-500"
+      className="dark:text-white text-fontDark sm:w-6 sm:h-6 w-5 h-5"
       onClick={handleClick}
     />
   );

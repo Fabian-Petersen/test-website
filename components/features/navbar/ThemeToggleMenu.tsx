@@ -18,10 +18,7 @@ const ThemeToggleMenu = () => {
   };
 
   return (
-    <div
-      className="text-buttonBlueColor w-[2rem] h-[2rem]
-        flex items-center justify-center rounded-full border-2 border-blue-500 bg-white dark:bg-white hover:cursor-pointer relative"
-    >
+    <div className="hover:cursor-pointer my-auto">
       {isDarkTheme ? (
         <ThemeToggleIcon
           handleClick={handleClick}
