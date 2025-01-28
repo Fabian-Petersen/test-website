@@ -22,6 +22,7 @@
   --all-pages-spacing: 1.5rem;
   --all-pages-spacing-small: 1rem;
   --testimonial-height: 300px;
+  --tw-enter-translate-x: -5%;
 }
 
 main {
@@ -186,6 +187,12 @@ input:focus {
     .no-scrollbar {
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
+    }
+
+    .animate-in {
+      animation-name: enter;
+      animation-duration: 150ms;
+      initial: --tw-translate-x, -5%;
     }
   }
 }

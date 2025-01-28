@@ -56,6 +56,16 @@ const config: Config = {
             opacity: "0",
           },
         },
+        scrollToTop: {
+          "0%": {
+            transform: "translate(-50%, 100vh)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translate-(50%, 90vh)",
+            opacity: "95",
+          },
+        },
         openNavBar: {
           "0%": {
             transform: "translate-x-[-100%]",
@@ -72,6 +82,9 @@ const config: Config = {
             transform: "translate-x-[-100%]",
           },
         },
+      },
+      animation: {
+        scrollToTop: "scrollToTop 0.8s ease-in-out",
       },
       height: {
         dvh: "100dvh",
