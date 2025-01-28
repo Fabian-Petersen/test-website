@@ -3,6 +3,7 @@
 // $ components
 import PageHeading from "../PageHeading";
 import TestimonialSlider from "./TestimonialSlider";
+import LoadingSpinner from "../features/LoadingSpinner";
 
 import { useFetchItem } from "@/lib/reactQueryCutomHooks";
 
@@ -27,9 +28,7 @@ const TestimonialPage = () => {
         <PageHeading title="Testimonials" className="bg-slate-200" />
         <div className="flex flex-col items-center h-full my-auto w-full">
           {isPending ? (
-            <div className="justify-center align-middle dark:text-white text-fontDark tracking-wider text-xl">
-              Loading...
-            </div>
+            <LoadingSpinner />
           ) : (
             <TestimonialSlider testimonials={testimonials} />
           )}
