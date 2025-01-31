@@ -23,6 +23,8 @@
   --all-pages-spacing-small: 1rem;
   --testimonial-height: 300px;
   --tw-enter-translate-x: -5%;
+  --clr-linkedin: #0077b5;
+  --clr-google: #ea4335;
 }
 
 main {
@@ -87,6 +89,9 @@ html {
 
 input:focus {
   border-color: transparent;
+  border: none;
+  outline: none;
+  border: rgba(0, 0, 255);
 }
 
 @layer base {
