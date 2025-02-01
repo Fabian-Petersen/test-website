@@ -9,13 +9,14 @@ import mySkillsData from "@/public/data/mySkillsData";
 
 const url = process.env.NEXT_PUBLIC_API_URL;
 
+// $ Check if the URL is defined, if not throw and error
 if (!url) {
   throw new Error(
     "NEXT_PUBLIC_API_URL is not defined in environment variables"
   );
 }
 
-// Updated helper function to properly parse the response
+// $ helper function to fetch the data to extract the param id's for staticParams
 async function fetchProjects(): Promise<ProjectCardDataType[]> {
   try {
     const response = await fetch(url + "/projects");
@@ -25,16 +26,14 @@ async function fetchProjects(): Promise<ProjectCardDataType[]> {
     }
 
     const data = await response.json();
-    console.log("Raw response:", data);
 
-    // Parse the JSON string in the body property if it exists
+    // $ Parse the JSON string in the body property if it exists
     if (data.body && typeof data.body === "string") {
       const parsedBody = JSON.parse(data.body);
-      console.log("Parsed projects:", parsedBody);
       return parsedBody;
     }
 
-    // If data is already in the correct format, return it directly
+    // $ If data is already in the correct format, return it directly
     if (Array.isArray(data)) {
       return data;
     }
@@ -46,6 +45,7 @@ async function fetchProjects(): Promise<ProjectCardDataType[]> {
   }
 }
 
+// $ Generate static params for each project
 export async function generateStaticParams() {
   const projects = await fetchProjects();
   return projects.map((project) => ({
@@ -53,9 +53,11 @@ export async function generateStaticParams() {
   }));
 }
 
-async function ProjectPage({ params }: { params: { id: string } }) {
+// $ Fetch the project data based on the id param and render the page
+async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const projects = await fetchProjects();
-  const project = projects.find((p) => p.id === params.id);
+  const project = projects.find((p) => p.id === id);
 
   if (!project) {
     notFound();

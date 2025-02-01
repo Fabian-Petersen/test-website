@@ -2,7 +2,7 @@
 import AWS from "aws-sdk";
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   let body;
   let statusCode = 200;
   const headers = {
@@ -78,7 +78,13 @@ exports.handler = async (event, context) => {
       //If no route found output message with all even
       default:
         throw new Error(
-          `Unsupported route: "${event.httpMethod + " " + event.resource + " - EVENT: " + JSON.stringify(event)}"`
+          `Unsupported route: "${
+            event.httpMethod +
+            " " +
+            event.resource +
+            " - EVENT: " +
+            JSON.stringify(event)
+          }"`
         );
     }
   } catch (err) {
