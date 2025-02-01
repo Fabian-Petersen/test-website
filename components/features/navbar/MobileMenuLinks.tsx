@@ -10,7 +10,7 @@ const MobileMenuLinks = () => {
         {pageLinkData.map((link) => (
           <li key={link.id}>
             <a
-              href={`#${link.url}`}
+              href={`${link.url}`}
               className="text-md uppercase tracking-wider text-fontLight hover:text-blue-500"
             >
               {link.name}

@@ -33,12 +33,12 @@ const SocialsLinkIcons = () => {
               className={`capitalize ${colorClass}`}
             >
               <Link href={href} className="">
-                <li className={`pageLinkIcons relative ${isGithub ? "" : ""}`}>
-                  <Image
-                    className={`w-[1.8rem] h-[1.8rem] md:w-[2.1rem] md:h-[2.1rem]`}
-                    src={iconImage}
-                    alt="icon"
-                  />
+                <li
+                  className={`pageLinkIcons relative sm:size-[2.5rem] size-[3rem] ${
+                    isGithub ? "" : ""
+                  }`}
+                >
+                  <Image src={iconImage} alt="icon" />
                 </li>
               </Link>
             </Tooltip>

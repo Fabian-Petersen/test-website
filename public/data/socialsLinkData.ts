@@ -29,7 +29,7 @@ const socialLinks = [
   },
   {
     id: "linkedin",
-    href: "/linkedin",
+    href: "https://www.linkedin.com/in/fabian-petersen-a5ba6737/",
     tooltip: "linkedin",
     iconImage: linkedin,
     color: "#0077b5",
@@ -40,7 +40,7 @@ const socialLinks = [
   },
   {
     id: "github",
-    href: "/github",
+    href: "https://github.com/Fabian-Petersen",
     tooltip: "github",
     iconImage: github,
     color: "#333",
@@ -48,7 +48,7 @@ const socialLinks = [
     animationClass: "animate-gitHubOpenAnimation",
     animationCloseClass: "animate-gitHubCloseAnimation socialIconStyles",
     className:
-      "relative before:content-[''] before:absolute before:inset-0 before:dark:bg-white before:rounded-full dark:before:block",
+      "relative before:content-[''] before:absolute before:inset-0 before:dark:bg-white before:rounded-full dark:before:block w-[2.5rem] h-[2.5rem]",
   },
 ];
 
