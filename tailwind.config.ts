@@ -30,7 +30,6 @@ const config: Config = {
         clampFooterLogoText: "clamp(2rem, 2vw, 2.5rem)",
         clampLogo: "clamp(1.5rem, 3vw, 2rem)",
         clampNavLinks: "clamp(0.8rem, 3vw, 1rem)",
-        clampHeroImage: "clamp(15rem, 5vw + 0.5rem, 25rem)",
         clampPageHeading: "clamp(1.3rem, 5vw + 0.5rem, 3rem)",
         clampTestimonialText: "clamp(1.8rem, 5vw, 3rem)",
         clampTestimonialBodyText: "clamp(0.7rem, 1.5vw, 0.8rem)",
@@ -38,6 +37,10 @@ const config: Config = {
       },
       width: {
         clampTestimonialCard: "clamp(15rem, 20vw, 20rem)",
+        clampHeroImage: "clamp(15rem, 20vw, 35rem)",
+      },
+      size: {
+        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
       },
       keyframes: {
         buttonPing: {

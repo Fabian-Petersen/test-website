@@ -84,7 +84,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             size="h2"
             className="mb-2"
           />
-          <HorizontalRule classname="border border-red-500 w-full" />
+          <HorizontalRule classname="border border-red-500" />
 
           <section className="flex flex-col space-y-2 items-start">
             <PageSubHeading title="Aim" size="h3" />
