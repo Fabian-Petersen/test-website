@@ -18,7 +18,7 @@ const ThemeToggleMenu = () => {
   };
 
   return (
-    <div className="hover:cursor-pointer my-auto">
+    <div className="hover:cursor-pointer my-auto flex items-center justify-center">
       {isDarkTheme ? (
         <ThemeToggleIcon
           handleClick={handleClick}

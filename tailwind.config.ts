@@ -31,17 +31,18 @@ const config: Config = {
         clampLogo: "clamp(1.5rem, 3vw, 2rem)",
         clampNavLinks: "clamp(0.8rem, 3vw, 1rem)",
         clampPageHeading: "clamp(1.3rem, 5vw + 0.5rem, 3rem)",
-        clampTestimonialText: "clamp(1.8rem, 5vw, 3rem)",
+        clampTestimonialText: "clamp(1rem, 3vw, 3rem)",
         clampTestimonialBodyText: "clamp(0.7rem, 1.5vw, 0.8rem)",
         clampButtonText: "clamp(0.8rem, 1.5vw, 1rem)",
       },
+      text: { clampNavLinks: "clamp(0.8rem, 2vw, 1rem)" },
       width: {
         clampTestimonialCard: "clamp(15rem, 20vw, 20rem)",
-        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
+        clampHeroImage: "clamp(20rem, 30vw, 35rem)",
       },
       height: {
         dvh: "100dvh",
-        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
+        clampHeroImage: "clamp(20rem, 30vw, 35rem)",
       },
       keyframes: {
         buttonPing: {

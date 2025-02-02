@@ -6,10 +6,11 @@
 
 type ButtonProps = {
   className?: string;
-  buttonLabel: string;
+  buttonLabel?: string;
   onClick?: () => void;
   disabled?: boolean;
   type?: "submit" | "button" | "reset";
+  children?: React.ReactNode;
 };
 
 const Button = ({
@@ -18,6 +19,7 @@ const Button = ({
   type,
   disabled,
   onClick,
+  children,
 }: ButtonProps) => {
   return (
     <button
@@ -26,6 +28,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
     >
+      {children}
       {buttonLabel}
     </button>
   );

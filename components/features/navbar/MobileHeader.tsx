@@ -32,7 +32,7 @@ const MobileHeader = ({ isOpen, setIsOpen }: MobileHeaderProps) => {
       >
         <FontAwesomeIcon icon={faBarsStaggered} />
       </button>
-      <div className="flex gap-2">
+      <div className="flex gap-4 items-center justify-between">
         <LoginButton />
         <AddTestimonialButton />
         <ThemeToggleMenu />

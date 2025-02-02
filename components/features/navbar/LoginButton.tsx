@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import Button from "@/components/features/Button";
 import { motion } from "framer-motion";
+import useScreenSize from "@/app/customHooks/useScreenSize";
 
 // $ Login Button Animation
 const loginVariants = {
@@ -16,6 +17,7 @@ const loginVariants = {
 };
 
 const LoginButton = () => {
+  const isScreenMobile = useScreenSize(740);
   const router = useRouter();
 
   const handleLogin = () => {
@@ -29,12 +31,21 @@ const LoginButton = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.8, duration: 0.8 }}
     >
-      <Button
-        buttonLabel="Admin"
-        type="button"
-        onClick={handleLogin}
-        className="hover:bg-buttonBlueColor hover:text-white transition-all duration-300 text-clampButtonText text-fontDark dark:text-fontLight sm:py-2 sm:px-4 py-1 px-2 rounded-full"
-      />
+      {isScreenMobile ? (
+        <Button
+          buttonLabel="Admin"
+          type="button"
+          onClick={handleLogin}
+          className="bg-buttonBlueColor hover:text-white transition-all duration-300 text-clampButtonText text-fontDark dark:text-fontLight sm:py-2 sm:px-4 py-1 px-2 rounded-full"
+        />
+      ) : (
+        <Button
+          buttonLabel="Admin"
+          type="button"
+          onClick={handleLogin}
+          className="hover:bg-buttonBlueColor hover:text-white transition-all duration-300 text-clampButtonText text-fontDark dark:text-fontLight sm:py-2 sm:px-4 py-1 px-2 rounded-full"
+        />
+      )}
     </motion.div>
   );
 };

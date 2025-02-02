@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroImage = () => {
   return (
-    <div className="hidden sm:flex sm:items-center sm:justify-center sm:h-full px-4">
+    <div className="hidden sm:flex sm:items-center sm:justify-center sm:h-full px-6">
       <Image
         src="/images/fabianImage.png"
         alt="hero"
