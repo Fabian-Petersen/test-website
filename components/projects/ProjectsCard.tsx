@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ProjectsCard = ({
   projectTitle,
-  description,
+  thumbnailDescription,
   id,
   image,
   githubLink,
@@ -26,7 +26,7 @@ const ProjectsCard = ({
           <h5 className="text-2xl font-bold tracking-wider capitalize">
             {projectTitle}
           </h5>
-          <p className="text-center">{description}</p>
+          <p className="text-center">{thumbnailDescription}</p>
           <CardButtons githubLink={githubLink} websiteLink={websiteLink} />
         </div>
       </Link>

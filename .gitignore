@@ -57,6 +57,10 @@ next-env.d.ts
 # Ignore Terraform lock file
 /terraform/.terraform.lock.hcl
 
+# Ignore Python pycache
+/app/lib/pythonScripts/__pycache__/*
+/app/lib/pythonScripts/myenv/*
+
 # Ignore provider overrides
 /terraform/override.tf
 /terraform/override.tf.json

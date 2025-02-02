@@ -1,11 +1,31 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import type { ProjectCardDataType } from "@/public/data/projectData";
 import { SkillsDataType } from "@/public/data/mySkillsData";
 import PageSubHeading from "@/components/PageSubHeading";
 import SkillCard from "@/components/about/SkillCard";
 import HorizontalRule from "@/components/features/HorizontalRule";
 import mySkillsData from "@/public/data/mySkillsData";
+import Image from "next/image";
+
+export type ProjectCardDataType = {
+  id?: string;
+  projectTitle: string;
+  language: string;
+  category: string;
+  thumbnailDescription: string;
+  image?: string;
+  websiteLink: string;
+  githubLink: string;
+  singlePage: {
+    title: string;
+    aim: string;
+    skillsApplied: string[];
+    architecture: string;
+    challenges: string[];
+    technologies: string[];
+    images: string;
+  };
+};
 
 const url = process.env.NEXT_PUBLIC_API_URL;
 
@@ -63,7 +83,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
     notFound();
   }
 
-  const projectSkills = project.singlePage?.skills as string[];
+  const projectSkills = project.singlePage?.technologies as string[];
   const skillCards: SkillsDataType[] =
     projectSkills
       ?.map((item) => {
@@ -94,15 +114,20 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
           </section>
 
           <section className="flex flex-col space-y-2 items-start">
-            <PageSubHeading title="Description" size="h3" />
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              {project.singlePage?.description}
-            </p>
+            <PageSubHeading title="Skills Applied" size="h3" />
+            <ul className="grid grid-cols-skillsGallery gap-4 place-items-start w-full">
+              {project.singlePage.skillsApplied.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </section>
 
-          <section className="flex flex-col space-y-2 items-start">
-            <PageSubHeading title="Challenges" size="h3" />
-            <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-300 leading-relaxed" />
+          <section>
+            <PageSubHeading title="Architecture" size="h3" />
+            <Image
+              src="https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/portfolio-architecture.svg"
+              alt="architecture"
+            />
           </section>
 
           <section className="flex flex-col space-y-2 items-start w-full">
@@ -116,6 +141,15 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
                 />
               ))}
             </div>
+          </section>
+
+          <section className="flex flex-col space-y-2 items-start">
+            <PageSubHeading title="Challenges" size="h3" />
+            <ul className="grid grid-cols-skillsGallery gap-4 place-items-start w-full">
+              {project.singlePage.challenges.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </section>
         </div>
       </div>
