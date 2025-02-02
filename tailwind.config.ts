@@ -37,7 +37,11 @@ const config: Config = {
       },
       width: {
         clampTestimonialCard: "clamp(15rem, 20vw, 20rem)",
-        clampHeroImage: "clamp(15rem, 20vw, 35rem)",
+        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
+      },
+      height: {
+        dvh: "100dvh",
+        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
       },
       keyframes: {
         buttonPing: {
@@ -85,10 +89,6 @@ const config: Config = {
       },
       animation: {
         scrollToTop: "scrollToTop 0.8s ease-in-out",
-      },
-      height: {
-        dvh: "100dvh",
-        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
       },
       gridTemplateColumns: {
         gallery: "repeat(auto-fill, minmax(250px, 1fr))",
