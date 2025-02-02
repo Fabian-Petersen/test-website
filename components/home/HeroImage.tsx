@@ -5,7 +5,7 @@ const HeroImage = () => {
   return (
     <div className="hidden sm:flex sm:items-center sm:justify-center sm:h-full">
       <Image
-        src="/images/fabianImage.png"
+        src="/images/fabianImage.jpg"
         alt="hero"
         className="size-clampHeroImage rounded-full"
         width={100}
