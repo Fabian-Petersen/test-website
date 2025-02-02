@@ -3,7 +3,6 @@ const figma = "https://img.icons8.com/color/96/000000/figma--v1.png";
 const css = "https://img.icons8.com/color/96/null/css3.png";
 const javascript = "https://img.icons8.com/color/96/null/javascript.png";
 const react = "https://img.icons8.com/color/96/null/react-native.png";
-const sass = "https://img.icons8.com/color/96/null/sass.png";
 const redux = "https://img.icons8.com/color/96/null/redux.png";
 const github = "https://img.icons8.com/color/96/null/github.png";
 const bootstrap = "https://img.icons8.com/color/96/null/bootstrap.png";
@@ -16,6 +15,7 @@ const nextjs = "https://img.icons8.com/fluency/96/nextjs.png";
 const tailwind = "https://img.icons8.com/fluency/96/tailwind_css.png";
 const aws = "https://img.icons8.com/color/96/000000/amazon-web-services.png";
 const python = "https://img.icons8.com/color/96/000000/python.png";
+const terraform = "https://img.icons8.com/color/96/terraform.png";
 
 import supabase from "./supabase.png";
 
@@ -36,6 +36,7 @@ const skillsIconImages = {
   aws,
   python,
   redux,
+  terraform,
 };
 
 export default skillsIconImages;

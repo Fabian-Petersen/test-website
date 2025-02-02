@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { SkillsDataType } from "@/public/data/mySkillsData";
 import PageSubHeading from "@/components/PageSubHeading";
 import SkillCard from "@/components/about/SkillCard";
-import HorizontalRule from "@/components/features/HorizontalRule";
 import mySkillsData from "@/public/data/mySkillsData";
 import Image from "next/image";
 
@@ -97,37 +96,45 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
       id="project"
       className="w-full bg-bgLight dark:bg-bgDark px-4 min-h-screen"
     >
-      <div className="flex flex-col gap-6 items-start sm:px-[var(--all-pages-spacing)] px-[var(--all-pages-spacing-small)] md:max-w-6xl mx-auto h-auto mt-[10rem] w-full">
-        <div className="flex flex-col items-start space-y-4 w-full">
-          <PageSubHeading
-            title={`Project Title: ${project.singlePage?.title}`}
-            size="h2"
-            className="mb-2"
-          />
-          <HorizontalRule classname="border border-red-500" />
+      <div className="flex flex-col gap-8 items-start sm:px-[var(--all-pages-spacing)] px-[var(--all-pages-spacing-small)] md:max-w-6xl mx-auto min-h-screen mt-[10rem] w-full">
+        <div className="flex flex-col items-start gap-6 w-full pb-6">
+          <section className="divide-y-2 divide-gray-300 dark:divide-gray-400 w-full">
+            <PageSubHeading
+              title={`Project Title: ${project.singlePage?.title}`}
+              size="h2"
+              className="mb-4"
+            />
+            <hr />
+          </section>
 
-          <section className="flex flex-col space-y-2 items-start">
+          <section className="flex flex-col space-y-4 items-start">
             <PageSubHeading title="Aim" size="h3" />
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               {project.singlePage?.aim}
             </p>
           </section>
 
-          <section className="flex flex-col space-y-2 items-start">
+          <section className="flex flex-col space-y-4 items-start">
             <PageSubHeading title="Skills Applied" size="h3" />
-            <ul className="grid grid-cols-skillsGallery gap-4 place-items-start w-full">
-              {project.singlePage.skillsApplied.map((item, index) => (
-                <li key={index}>{item}</li>
+            <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
+              {project.singlePage.skillsApplied?.map((item, index) => (
+                <li className="w-full capitalize" key={index}>
+                  {item}
+                </li>
               ))}
             </ul>
           </section>
 
-          <section>
+          <section className="flex flex-col space-y-4 items-start">
             <PageSubHeading title="Architecture" size="h3" />
-            <Image
-              src="https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/portfolio-architecture.svg"
-              alt="architecture"
-            />
+            <div className="rounded-lg overflow-hidden w-full border-gray-500 border">
+              <Image
+                src="https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/portfolio-architecture.svg"
+                alt="architecture"
+                width={800}
+                height={400}
+              />
+            </div>
           </section>
 
           <section className="flex flex-col space-y-2 items-start w-full">
@@ -145,9 +152,11 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
 
           <section className="flex flex-col space-y-2 items-start">
             <PageSubHeading title="Challenges" size="h3" />
-            <ul className="grid grid-cols-skillsGallery gap-4 place-items-start w-full">
+            <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
               {project.singlePage.challenges.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li className="w-full" key={index}>
+                  {item}
+                </li>
               ))}
             </ul>
           </section>

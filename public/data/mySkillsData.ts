@@ -17,16 +17,14 @@ const {
   css,
   javascript,
   react,
-  bootstrap,
   figma,
-  visualstudiocode,
   nextjs,
-  github,
   typescript,
   tailwind,
   aws,
   python,
   redux,
+  terraform,
 } = skillsIconImages;
 
 const mySkillsData: SkillsDataType[] = [
@@ -74,14 +72,14 @@ const mySkillsData: SkillsDataType[] = [
   },
   {
     id: uuidv4(),
-    language: "next",
+    language: "nextjs",
     iconImage: nextjs,
     category: "frontEnd",
     className: "api",
   },
   {
     id: uuidv4(),
-    language: "AWS",
+    language: "aws",
     iconImage: aws,
     category: "backend",
     className: "aws",
@@ -106,6 +104,13 @@ const mySkillsData: SkillsDataType[] = [
     iconImage: typescript,
     category: "frontEnd",
     className: "typescript",
+  },
+  {
+    id: uuidv4(),
+    language: "terraform",
+    iconImage: terraform,
+    category: "backend",
+    className: "api",
   },
 ];
 
