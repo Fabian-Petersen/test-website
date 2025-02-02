@@ -39,9 +39,6 @@ const config: Config = {
         clampTestimonialCard: "clamp(15rem, 20vw, 20rem)",
         clampHeroImage: "clamp(15rem, 20vw, 35rem)",
       },
-      size: {
-        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
-      },
       keyframes: {
         buttonPing: {
           "0%, 100": {
@@ -91,6 +88,7 @@ const config: Config = {
       },
       height: {
         dvh: "100dvh",
+        clampHeroImage: "clamp(15rem, 40vw, 35rem)",
       },
       gridTemplateColumns: {
         gallery: "repeat(auto-fill, minmax(250px, 1fr))",
