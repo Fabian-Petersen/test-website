@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
 
+env:
+  NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,7 +21,11 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+        run: |
+          echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL"
+          npm run build
 
       - name: List build output
         run: ls -la out/
