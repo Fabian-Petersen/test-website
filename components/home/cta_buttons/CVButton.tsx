@@ -36,13 +36,19 @@ const CVButton = ({ className }: ButtonProps) => {
       const blobURL = window.URL.createObjectURL(blob);
 
       // $ Trigger file download
-      const link = document.createElement("a");
-      link.href = blobURL;
-      link.download = file_Name;
-      link.click();
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // For mobile: Open in new tab
+        window.open(blobURL, "_blank");
+      } else {
+        // For desktop: Use download attribute
+        const link = document.createElement("a");
+        link.href = blobURL;
+        link.download = file_Name;
+        link.click();
+      }
 
       // $ Clean up the blob URL
-      window.URL.revokeObjectURL(blobURL);
+      setTimeout(() => window.URL.revokeObjectURL(blobURL), 100);
 
       // $ Show success toast
       toast({
@@ -72,7 +78,7 @@ const CVButton = ({ className }: ButtonProps) => {
           size={isMobile ? "sm" : "md"}
         >
           <Loader2 className="animate-spin mr-2" />
-          Please Wait...
+          Downloading...
         </Button>
       ) : (
         <Button

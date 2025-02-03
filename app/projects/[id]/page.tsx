@@ -90,6 +90,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
       })
       .filter((skill): skill is SkillsDataType => skill !== null) || [];
 
+  // $ Assert type challenge is an array of strings
   const challenges = project.singlePage?.challenges as string[];
 
   return (

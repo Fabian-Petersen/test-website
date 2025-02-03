@@ -1,9 +1,9 @@
 # Description: This script uploads the project data from "./projectsDynamoData.py" to the DynamoDB table
 
-import boto3
+import boto3 # type: ignore
 import uuid
 from projectsDynamoData import entries
-from botocore.exceptions import ClientError
+from botocore.exceptions import ClientError # type: ignore
 
 # Initialize the DynamoDB resource
 region = 'af-south-1'
