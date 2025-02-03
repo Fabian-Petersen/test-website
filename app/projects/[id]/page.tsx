@@ -39,7 +39,6 @@ if (!url) {
 async function fetchProjects(): Promise<ProjectCardDataType[]> {
   try {
     const response = await fetch(url + "/projects");
-
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -91,6 +90,8 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
       })
       .filter((skill): skill is SkillsDataType => skill !== null) || [];
 
+  const challenges = project.singlePage?.challenges as string[];
+
   return (
     <main
       id="project"
@@ -117,7 +118,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
           <section className="flex flex-col space-y-4 items-start">
             <PageSubHeading title="Skills Applied" size="h3" />
             <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
-              {project.singlePage.skillsApplied?.map((item, index) => (
+              {challenges.map((item, index) => (
                 <li className="w-full capitalize" key={index}>
                   {item}
                 </li>
