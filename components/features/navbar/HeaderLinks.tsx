@@ -31,12 +31,16 @@ const HeaderLinks: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
-      <ul className="flex justify-evenly gap-2 sm:gap-4 md:gap-8 items-center h-full">
+      <ul className="flex xs:gap-2 gap-4 flex-1">
         {pageLinkData.map((link) => (
-          <motion.li key={link.id} variants={childVariants}>
+          <motion.li
+            key={link.id}
+            variants={childVariants}
+            className="xs:text-[0.85rem] md:text-[1.1rem] lg:text-[1.2rem]"
+          >
             <a
               href={`${link.url}`}
-              className="text-[0.7rem] md:text-[1rem] uppercase tracking-wider hover:text-buttonBlueColor transition-all duration-100"
+              className="uppercase tracking-wider hover:text-buttonBlueColor transition-all duration-100"
             >
               {link.name}
             </a>

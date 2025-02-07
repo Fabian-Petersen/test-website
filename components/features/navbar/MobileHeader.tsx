@@ -1,7 +1,7 @@
 "use client";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ThemeToggleMenu from "./ThemeToggleMenu";
+import ThemeToggleMenu from "./ThemeToggleButton";
 import useIsScrolled from "@/app/customHooks/useIsScrolled";
 import { Dispatch, SetStateAction } from "react";
 import AddTestimonialButton from "./AddTestimonialButton";

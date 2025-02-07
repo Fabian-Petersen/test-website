@@ -29,7 +29,7 @@ const config: Config = {
         clampFooterHeading: "clamp(1.5rem, 1.5vw, 2rem)",
         clampFooterLogoText: "clamp(2rem, 2vw, 2.5rem)",
         clampLogo: "clamp(1.5rem, 3vw, 2rem)",
-        clampNavLinks: "clamp(0.8rem, 3vw, 1rem)",
+        clampNavLinks: "clamp(0.8rem, 5vw, 1rem)",
         clampPageHeading: "clamp(1.3rem, 5vw + 0.5rem, 3rem)",
         clampTestimonialText: "clamp(1rem, 3vw, 3rem)",
         clampTestimonialBodyText: "clamp(0.7rem, 1.5vw, 0.8rem)",

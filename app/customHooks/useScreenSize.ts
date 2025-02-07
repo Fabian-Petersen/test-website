@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 
 const useScreenSize = (width: number) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {

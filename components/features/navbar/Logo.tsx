@@ -24,7 +24,7 @@ const Logo = ({ isScrolled, variant }: LogoProps) => {
       transition={{ duration: 0.8 }}
       className={
         isNavbar
-          ? "flex items-center logo ml-[3rem] h-full tracking-wide"
+          ? "flex items-center logo h-full tracking-wide"
           : " flex pt-4 w-full h-full"
       }
     >
