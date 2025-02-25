@@ -1,27 +1,12 @@
-import { motion } from "framer-motion";
-
 type LogoProps = {
   isScrolled?: boolean;
   variant?: "navbar" | "footer";
 };
 
-// $ Logo Animation
-const logoVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
-  transition: {
-    duration: 0.8,
-  },
-};
-
 const Logo = ({ isScrolled, variant }: LogoProps) => {
   const isNavbar = variant === "navbar";
   return (
-    <motion.div
-      variants={logoVariants}
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    <div
       className={
         isNavbar
           ? "flex items-center logo h-full tracking-wide"
@@ -42,7 +27,7 @@ const Logo = ({ isScrolled, variant }: LogoProps) => {
         <span>.</span>
         <span>.</span>
       </p>
-    </motion.div>
+    </div>
   );
 };
 

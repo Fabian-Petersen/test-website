@@ -129,7 +129,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
 
           <section className="flex flex-col space-y-4 items-start">
             <PageSubHeading title="Architecture" size="h3" />
-            <div className="rounded-lg overflow-hidden w-full border-gray-500 border">
+            <div className="rounded-lg overflow-hidden w-full">
               <Image
                 src={project.singlePage?.architecture}
                 alt="architecture"

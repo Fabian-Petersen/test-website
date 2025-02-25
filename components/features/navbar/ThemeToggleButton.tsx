@@ -5,21 +5,10 @@
 "use client";
 import useSetTheme from "@/app/customHooks/useSetDarkTheme";
 import { useGlobalContext } from "@/app/useGlobalContext";
-import { motion } from "framer-motion";
 import { Tooltip } from "flowbite-react";
 import { Moon, Sun } from "lucide-react";
 import Button from "@/components/features/Button";
 import useScreenSize from "@/app/customHooks/useScreenSize";
-
-// $ Login Button Animation
-const loginVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
-  transition: {
-    delay: 1.8,
-    duration: 0.8,
-  },
-};
 
 const ThemeToggleButton = () => {
   const { toggleDarkTheme } = useSetTheme();
@@ -31,13 +20,7 @@ const ThemeToggleButton = () => {
   };
 
   return (
-    <motion.div
-      variants={loginVariants}
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.8, duration: 0.8 }}
-      className="hover:cursor-pointer"
-    >
+    <div className="hover:cursor-pointer">
       {isDarkTheme ? (
         <Tooltip content="Dark" placement="bottom">
           <Button
@@ -59,7 +42,7 @@ const ThemeToggleButton = () => {
           </Button>
         </Tooltip>
       )}
-    </motion.div>
+    </div>
   );
 };
 

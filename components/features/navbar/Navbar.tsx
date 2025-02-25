@@ -17,7 +17,7 @@ const Navbar = () => {
             : "fixed bg-opacity-0 top-0 left-0 w-full z-[2000] md:flex md:items-center transition-all py-4"
         }`}
       >
-        <div className="flex w-full items-center justify-around">
+        <div className="flex w-full items-center justify-between px-10">
           <Logo isScrolled={isScrolled} variant="navbar" />
           <HeaderLinks />
           <NavbarActionButtons />

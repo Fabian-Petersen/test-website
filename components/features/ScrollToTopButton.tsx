@@ -30,10 +30,10 @@ const ScrollToTopButton = () => {
       }`}
     >
       <button
-        className={`text-white flex items-center justify-center rounded-full dark:bg-white  hover:scale-105 transform transition-transform duration-800`}
+        className={`text-white flex items-center justify-center rounded-full dark:bg-white bg-gray-500  hover:scale-105 transform transition-transform duration-800`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        <ChevronUp className="size-10 text-gray-500" />
+        <ChevronUp className="size-10 dark:text-gray-500 text-white" />
       </button>
     </div>
   );
