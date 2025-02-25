@@ -145,5 +145,22 @@ entries = [
       "images": "",
       "challenges": ["Deploying the REST API to correctly manage incoming data and handle the data on the backend with python. <br/> Solution: Used Thunder Client to test the API routes to ensure the data are correct. Testing the lambda fucntions using mock data on AWS console to ensure data is processed correctly ", "CORS issues with the REST API and the frontend. <br/> Solution: Uses Thunder Client, curl cli to test the data send to the backend. In the end it was a setting on the API itself `enable Proxy Integration` which caused the issue","Build errors when deploying the website to the S3 bucket. <br/> Solution: I had to learn the generateStaticParams to handle the dynamic routes of the project pages."]
     }
+  },  {
+    "projectTitle": "figma dashboard build",
+    "language": "nextjs",
+    "category": "front-end",
+    "thumbnail description": "Build a dashboard based on a figma design template from figma.com/community projects",
+    "image": "https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/Dashboard+Design.png",
+    "websiteLink": "https://dashboard.fabian-portfolio.net",
+    "githubLink": "https://github.com/Fabian-Petersen/figma-dashboard.git",
+    "singlePage": {
+      "title": "figma sales dashboard",
+      "aim": "Building a dashboard from a design template from figma.com/community free templates.",
+      "skills applied": ['Create and Deploy a REST API','user authentication using aws cognito', 'manage form data with zod validation schemas','use python to manage backend logic of incoming data via the REST API', 'Use Cloudfront to manage the distruibution of the website for caching data improving site performance','Deploy the website using github actions to an S3 bucket', 'use Amazon Certificate Manager to allow https to secure the website', 'Use Route 53 for domain records, A and CNAME records. Use PostgesSQL database with Aurora with mock data to create the dashboard charts.'],
+      "architecture":"https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/figma-feature-dashboard.png",
+      "technologies": ["python", "aws", "github actions","typescript","nextjs", "tailwindcss", "recharts"],
+      "images": "",
+      "challenges": ["challenge 1<br/> Solution: Solution 1"]
+    }
   }
-];
+]

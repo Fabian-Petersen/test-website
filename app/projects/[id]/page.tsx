@@ -104,7 +104,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             <PageSubHeading
               title={`Project Title: ${project.singlePage?.title}`}
               size="h2"
-              className="mb-4"
+              className="mb-4 capitalize"
             />
             <hr />
           </section>
@@ -131,7 +131,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             <PageSubHeading title="Architecture" size="h3" />
             <div className="rounded-lg overflow-hidden w-full border-gray-500 border">
               <Image
-                src="https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/portfolio-architecture.svg"
+                src={project.singlePage?.architecture}
                 alt="architecture"
                 width={800}
                 height={400}
