@@ -1,0 +1,22 @@
+{
+  "websiteLink": "https://pospadi.com.ng",
+  "projectTitle": "pos-padi",
+  "image": "https://fabian-portfolio-project-images.s3.af-south-1.amazonaws.com/pos-padi.jpg",
+  "category": "front-end",
+  "description": "POS-Padi transforms your business with seamless transactions, real-time insights, and unmatched support.",
+  "githubLink": "https://github.com/InternPulse/pos-padi-frontend.git",
+  "language": "react",
+  "singlePage": {
+    "skills": ["html", "css", "javascript", "react", "chakra-ui"],
+    "description": "",
+    "images": "",
+    "aim": "POS-Padi is a mobile and web-based platform designed to help POS agents manage operations efficiently, prevent fraud, and gain access to a verified cash supply network. It supports real-time transaction tracking, intelligent alerts, dispute resolution, network of cash suppliers and detailed analytics targeted to help POS agents and business owners operate more effectively in both urban and underserved rural areas. POS-Padi enhances operational reliability, service delivery and strengthens customer trust in POS transactions",
+    "title": "POS-Padi",
+    "challenges": [
+      "I had to use Chakra UI for building the application frontend, this was new to me and I had to learn quickly to be able to contributute to the team",
+      "Using github in a team setting, a quick revision of my github notes helped to overcome this challenge.",
+      "The deadlines for the project was really tight, this often meant coding into the early hours of the morning. I dedicated my time to the project and prioritised other activities to deliver my features time.",
+      "The development team was diverse and spread across different countries, which often meant late night meetings. Effective communication was essential to make it all work and to get to know each other."
+    ]
+  }
+}
