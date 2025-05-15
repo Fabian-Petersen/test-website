@@ -91,7 +91,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
       .filter((skill): skill is SkillsDataType => skill !== null) || [];
 
   // $ Assert type challenge is an array of strings
-  const challenges = project.singlePage?.challenges as string[];
+  // const challenges = project.singlePage?.challenges as string[];
 
   return (
     <main
@@ -111,7 +111,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
 
           <section className="flex flex-col space-y-4 items-start w-full h-auto">
             <PageSubHeading title="Aim" size="h3" />
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed dark:border-gray-400 rounded-lg p-4 w-[100%]">
+            <p className="text-fontDark dark:text-white leading-relaxed dark:border-gray-400 rounded-lg p-4 w-[100%]">
               {project.singlePage?.aim}
             </p>
           </section>
@@ -119,7 +119,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
           <section className="flex flex-col space-y-4 items-start w-full h-auto">
             <PageSubHeading title="Skills Applied" size="h3" />
             <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
-              {challenges.map((item, index) => (
+              {project.singlePage.skillsApplied.map((item, index) => (
                 <li className="w-full capitalize" key={index}>
                   {item}
                 </li>
@@ -127,9 +127,9 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             </ul>
           </section>
 
-          <section className="flex flex-col space-y-4 items-start w-full h-auto">
-            <PageSubHeading title="Architecture" size="h3" />
-            {project.singlePage.architecture && (
+          {project.singlePage.architecture && (
+            <section className="flex flex-col space-y-4 items-start w-full h-auto">
+              <PageSubHeading title="Architecture" size="h3" />
               <div className="rounded-lg overflow-hidden w-full border-none">
                 <Image
                   src={project.singlePage?.architecture}
@@ -138,8 +138,8 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
                   height={400}
                 />
               </div>
-            )}
-          </section>
+            </section>
+          )}
 
           <section className="flex flex-col space-y-2 items-start w-full h-auto">
             <PageSubHeading title="Stack used in the Project" size="h3" />
