@@ -96,7 +96,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   return (
     <main
       id="project"
-      className="w-full bg-bgLight dark:bg-bgDark px-4 min-h-screen"
+      className="w-full bg-bgLight dark:bg-bgDark px-4 min-h-screen mb-[5rem]"
     >
       <div className="flex flex-col gap-8 items-start sm:px-[var(--all-pages-spacing)] px-[var(--all-pages-spacing-small)] md:max-w-6xl mx-auto min-h-screen mt-[10rem] w-full">
         <div className="flex flex-col items-start gap-6 w-full pb-6">
@@ -109,14 +109,14 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             <hr />
           </section>
 
-          <section className="flex flex-col space-y-4 items-start">
+          <section className="flex flex-col space-y-4 items-start w-full h-auto">
             <PageSubHeading title="Aim" size="h3" />
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed dark:border-gray-400 rounded-lg p-4 w-[100%]">
               {project.singlePage?.aim}
             </p>
           </section>
 
-          <section className="flex flex-col space-y-4 items-start">
+          <section className="flex flex-col space-y-4 items-start w-full h-auto">
             <PageSubHeading title="Skills Applied" size="h3" />
             <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
               {challenges.map((item, index) => (
@@ -127,19 +127,21 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             </ul>
           </section>
 
-          <section className="flex flex-col space-y-4 items-start">
+          <section className="flex flex-col space-y-4 items-start w-full h-auto">
             <PageSubHeading title="Architecture" size="h3" />
-            <div className="rounded-lg overflow-hidden w-full border-none">
-              <Image
-                src={project.singlePage?.architecture}
-                alt="architecture"
-                width={800}
-                height={400}
-              />
-            </div>
+            {project.singlePage.architecture && (
+              <div className="rounded-lg overflow-hidden w-full border-none">
+                <Image
+                  src={project.singlePage?.architecture}
+                  alt="architecture"
+                  width={800}
+                  height={400}
+                />
+              </div>
+            )}
           </section>
 
-          <section className="flex flex-col space-y-2 items-start w-full">
+          <section className="flex flex-col space-y-2 items-start w-full h-auto">
             <PageSubHeading title="Stack used in the Project" size="h3" />
             <div className="grid grid-cols-skillsGallery gap-4 place-items-start w-full">
               {skillCards.map((item) => (
@@ -152,7 +154,7 @@ async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
             </div>
           </section>
 
-          <section className="flex flex-col space-y-2 items-start">
+          <section className="flex flex-col space-y-2 items-start w-full h-auto">
             <PageSubHeading title="Challenges" size="h3" />
             <ul className="list-disc pl-5 place-items-start w-full space-y-2 dark:text-white text-fontDark">
               {project.singlePage.challenges.map((item, index) => (

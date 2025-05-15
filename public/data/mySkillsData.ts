@@ -24,6 +24,7 @@ const {
   aws,
   python,
   redux,
+  chakraui,
   terraform,
 } = skillsIconImages;
 
@@ -110,6 +111,13 @@ const mySkillsData: SkillsDataType[] = [
     language: "terraform",
     iconImage: terraform,
     category: "backend",
+    className: "api",
+  },
+  {
+    id: uuidv4(),
+    language: "chakra-UI",
+    iconImage: chakraui,
+    category: "frontEnd",
     className: "api",
   },
 ];

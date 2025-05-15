@@ -9,7 +9,7 @@ import AboutPage from "@/components/about/AboutPage";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-start justify-center h-auto mx-auto overflow-hidden">
+    <main className="flex flex-col items-start justify-center h-auto mx-auto">
       <LandingPage />
       <AboutPage />
       <ProjectsPage />
